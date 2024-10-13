@@ -1,5 +1,6 @@
 import random
 from blackjack_art import logo
+from blackjack_art import emoji
 
 
 def deal_card():
@@ -24,19 +25,19 @@ def calculate_score(cards):
 def compare(u_score, c_score):
     """Compares the user score u_score against the computer score c_score."""
     if u_score == c_score:
-        return "Draw 🙃"
+        return "Draw "
     elif c_score == 0:
-        return "Lose, opponent has Blackjack 😱"
+        return "Lose, opponent has Blackjack "
     elif u_score == 0:
-        return "Win with a Blackjack 😎"
+        return "Win with a Blackjack "
     elif u_score > 21:
-        return "You went over. You lose 😭"
+        return "You went over. You lose "
     elif c_score > 21:
-        return "Opponent went over. You win 😁"
+        return "Opponent went over. You win "
     elif u_score > c_score:
-        return "You win 😃"
+        return "You win "
     else:
-        return "You lose 😤"
+        return "You lose "
 
 
 def play_game():
