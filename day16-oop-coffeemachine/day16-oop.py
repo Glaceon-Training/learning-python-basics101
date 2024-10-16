@@ -22,6 +22,7 @@ table.add_rows(
         ["#007", "Froakie", "Water"],
         ["#008", "Frogadier", "Water"],
         ["#009", "Greninja", "Water - Dark"],
+        ["#010", "Pikachu", "Electric"],
     ]
 )
 
