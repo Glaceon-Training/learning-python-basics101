@@ -12,17 +12,17 @@ def random_colors():
     r = random.randint(0, 255)
     g = random.randint(0, 255)
     b = random.randint(0, 255)
-    return t.pencolor(r, g, b)
+    return timmy.pencolor(r, g, b)
 
 
-t.width(6)
-t.speed(9)
+timmy.width(6)
+timmy.speed(9)
 direction = [0, 90, 180, 270]
 
 for _ in range(200):
     random_colors()
-    t.forward(20)
-    t.setheading(random.choice(direction))
+    timmy.forward(20)
+    timmy.setheading(random.choice(direction))
 
 screen = t.Screen()
 screen.exitonclick()

@@ -8,10 +8,10 @@ side = 3
 colors = ["aquamarine3", "cadetblue", "bisque4", "brown", "darkviolet", "midnightblue"]
 
 while side <= 10:
-    t.pencolor(random.choice(colors))
+    timmy.pencolor(random.choice(colors))
     for _ in range(side):
-        t.forward(100)
-        t.right(360/side)
+        timmy.forward(100)
+        timmy.right(360/side)
     side += 1
 
 screen = t.Screen()

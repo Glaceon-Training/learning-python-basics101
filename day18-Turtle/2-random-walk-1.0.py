@@ -6,14 +6,14 @@ import random
 timmy = t.Turtle()
 colors = ["light slate gray", "navy", "pale turquoise", "teal", "light green", "khaki", "wheat", "orange", "tomato",
           "pink", "plum", "medium purple"]
-t.width(6)
-t.speed(9)
+timmy.width(6)
+timmy.speed(9)
 direction = [0, 90, 180, 270]
 
 for _ in range(200):
-    t.pencolor(random.choice(colors))
-    t.forward(20)
-    t.setheading(random.choice(direction))
+    timmy.pencolor(random.choice(colors))
+    timmy.forward(20)
+    timmy.setheading(random.choice(direction))
 
 screen = t.Screen()
 screen.exitonclick()

@@ -4,7 +4,7 @@ import random
 # Creating spirograph of random colors
 timmy = t.Turtle()
 t.colormode(255)
-t.speed(0)
+timmy.speed(0)
 heading = 0
 
 
@@ -13,15 +13,15 @@ def random_colors():
     r = random.randint(0, 255)
     g = random.randint(0, 255)
     b = random.randint(0, 255)
-    return t.pencolor(r, g, b)
+    return timmy.pencolor(r, g, b)
 
 
 is_turtle_drawing = True
 while is_turtle_drawing:
     random_colors()
-    t.setheading(heading)
-    t.circle(50)
-    heading += 8
+    timmy.setheading(heading)
+    timmy.circle(100)
+    heading += 5
     if heading == 360:
         is_turtle_drawing = False
 

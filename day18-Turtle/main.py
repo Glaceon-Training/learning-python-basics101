@@ -23,8 +23,8 @@ final_color_palette = [
 
 timmy = t.Turtle()
 t.colormode(255)
-t.speed(0)
-t.hideturtle()
+timmy.speed(0)
+timmy.hideturtle()
 
 
 def draw_hirst(dots):
@@ -33,11 +33,11 @@ def draw_hirst(dots):
     y = -225
 
     for _ in range(dots):
-        t.teleport(x, y)
-        t.dot(20, random.choice(final_color_palette))
+        timmy.teleport(x, y)
+        timmy.dot(20, random.choice(final_color_palette))
         dot_count += 1
         x += 50
-        t.teleport(x, y)
+        timmy.teleport(x, y)
         if dot_count % 10 == 0:
             x = -230
             y += 50
