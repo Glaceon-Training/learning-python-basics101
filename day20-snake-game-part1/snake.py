@@ -8,7 +8,6 @@ DOWN = 270
 
 
 class Snake:
-
     def __init__(self):
         self.body = []
         self.spawn()
@@ -16,12 +15,18 @@ class Snake:
 
     """Creating snake body of 3 segments in starting point"""
     def spawn(self):
-        for body in STARTING_POS:
-            new_body = t.Turtle("square")
-            new_body.color("white")
-            new_body.penup()
-            new_body.goto(body)
-            self.body.append(new_body)
+        for position in STARTING_POS:
+            self.add_segment(position)
+
+    def add_segment(self, position):
+        new_body = t.Turtle("square")
+        new_body.color("white")
+        new_body.penup()
+        new_body.goto(position)
+        self.body.append(new_body)
+
+    def add_body(self):
+        self.add_segment(self.body[-1].position())
 
     """Making the snake moving from last to head body segment move"""
     def move(self):
@@ -31,6 +36,7 @@ class Snake:
             self.body[bod_num].goto(new_x, new_y)
         self.head.forward(MOVE_DISTANCE)
 
+    """Controlling the snake movement with arrow pads"""
     def right(self):
         if self.head.heading() != LEFT:
             self.head.setheading(RIGHT)
