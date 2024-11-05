@@ -35,7 +35,7 @@ class Snake:
 
     """Making the snake moving from last to head body segment move"""
     # Range(Start, Stop, Step): Moving from last index toward head as first index.
-    # New X of index 2 go to index 1 (of length of 3 body part at start, thus 2-1), so is New Y.
+    # New X of index 2 is the xcor of index 1 (snake length is 3 body part at start, thus -1 to get index), so is New Y.
     # So then body at index 2 move to body at index 1.
     # The head will move forward at distance 20 so that the rest of the body will follow.
     def move(self):

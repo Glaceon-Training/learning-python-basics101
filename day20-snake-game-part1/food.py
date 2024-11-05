@@ -1,8 +1,8 @@
 from turtle import Turtle
 import random
 
-LEFT_LIMIT = -260
-RIGHT_LIMIT = 260
+NEGATIVE_LIMIT = -260
+POSITIVE_LIMIT = 260
 
 
 class Food(Turtle):
@@ -20,6 +20,6 @@ class Food(Turtle):
 
     # The spawn area is specified between -270 to 270 of screen pixels. Not too close to wall.
     def random_spawn(self):
-        random_x = random.randint(a=LEFT_LIMIT, b=RIGHT_LIMIT)
-        random_y = random.randint(a=LEFT_LIMIT, b=RIGHT_LIMIT)
+        random_x = random.randint(a=NEGATIVE_LIMIT, b=POSITIVE_LIMIT)
+        random_y = random.randint(a=NEGATIVE_LIMIT, b=POSITIVE_LIMIT)
         self.goto(random_x, random_y)
