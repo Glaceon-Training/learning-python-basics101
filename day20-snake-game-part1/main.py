@@ -37,13 +37,13 @@ while is_game_on:
 
     # Detect if snake hits the wall, and goes Game Over.
     if snake.head.xcor() < -280 or snake.head.xcor() > 280 or snake.head.ycor() < -280 or snake.head.ycor() > 280:
-        is_game_on = False
-        score.game_over()
+        score.reset()
+        snake.reset_snake()
 
     # Detect if snake's head hit its own body. Goes Game Over if it happens.
     for segment in snake.body[1:]:
         if snake.head.distance(segment) < 10:
-            is_game_on = False
-            score.game_over()
+            score.reset()
+            snake.reset_snake()
 
 screen.exitonclick()

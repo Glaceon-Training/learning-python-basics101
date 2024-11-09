@@ -64,3 +64,10 @@ class Snake:
     def down(self):
         if self.head.heading() != UP:
             self.head.setheading(DOWN)
+
+    def reset_snake(self):
+        for segment in self.body:
+            segment.goto(1000, 1000)
+        self.body.clear()
+        self.spawn()
+        self.head = self.body[0]
