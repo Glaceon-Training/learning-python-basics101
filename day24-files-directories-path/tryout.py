@@ -122,9 +122,9 @@ Which is the "Macintosh HD" or "C:".
 
 --QUIZ 3:
 A "quiz.txt" path is: /all_files/my_files/quiz_files/quiz.txt
-A "main.py" path is: /all_files/my_project/main.py
+A "miles_to_km.py" path is: /all_files/my_project/miles_to_km.py
 
-To open "quiz.txt" relative to "main.py", the Open() path is:
+To open "quiz.txt" relative to "miles_to_km.py", the Open() path is:
 ../my_files/quiz_files/quiz.txt
 
 it is to go up one folder to "all_files" then go down the "my_files" and so on folders to get "quiz.txt".
